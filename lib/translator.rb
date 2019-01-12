@@ -12,7 +12,7 @@ def get_japanese_emoticon(path, emoticon)
       return emos[1]
     end
   end
-  return "apology"
+  return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(path, emoticon)
@@ -22,7 +22,7 @@ def get_english_meaning(path, emoticon)
       return emos[0]
     end
   end
-  return "apology"
+  return "Sorry, that emoticon was not found"
   # code goes here
 end
 
