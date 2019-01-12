@@ -5,8 +5,8 @@ def load_library(path)
   yaml_library = YAML.load_file(path)
   library = { "get_meaning" => {}, "get_emoticon" => {} }
   yaml_library.each do |name, emos|
-    library["get_meaning"][name[1]] = name
-    library["get_emoticon"][name[0]] = name[1]
+    library["get_meaning"][emos[1]] = name
+    library["get_emoticon"][emos[0]] = emos[1]
 =begin
     emos.each do |english, japanese|
       library["get_meaning"][japanese] = name
