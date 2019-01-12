@@ -23,13 +23,11 @@ end
 
 def get_english_meaning(path, emoticon)
   library = load_library(path)
-  library.each do |name, emos|
-    if emos[1] = emoticon
-      return emos[0]
-    end
+  if library["get_meaning"].has_key?(emoticon)
+    return library["get_meaning"][emoticon]
+  else
+    return "Sorry, that emoticon was not found"
   end
-  return "Sorry, that emoticon was not found"
-  # code goes here
 end
 
 =begin
