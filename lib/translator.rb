@@ -14,9 +14,7 @@ end
 
 def get_japanese_emoticon(path, emoticon)
   library = load_library(path)
-  library.each do |name, emos|
-    if emos[0] = emoticon
-      return emos[1]
+  return library["get_emoticon"][emoticon]
     end
   end
   return "Sorry, that emoticon was not found"
