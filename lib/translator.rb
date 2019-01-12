@@ -11,9 +11,18 @@ def get_japanese_emoticon(path, emoticon)
     if emos[0] = emoticon
       return emos[1]
     end
+  end
+  return "apology"
 end
 
-def get_english_meaning
+def get_english_meaning(path, emoticon)
+  library = load_library(path)
+  library.each do |name, emos|
+    if emos[1] = emoticon
+      return emos[0]
+    end
+  end
+  return "apology"
   # code goes here
 end
 
