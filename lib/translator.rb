@@ -8,6 +8,7 @@ end
 
 def get_japanese_emoticon
   library = load_library
+  
 end
 
 def get_english_meaning
