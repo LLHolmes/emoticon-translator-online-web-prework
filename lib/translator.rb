@@ -15,4 +15,4 @@ def get_english_meaning
   # code goes here
 end
 
-puts library = YAML.load_file('emoticons.yml')
+puts library = YAML.load_file('./emoticons.yml')
