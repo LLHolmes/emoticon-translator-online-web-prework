@@ -2,19 +2,11 @@
 require "yaml"
 
 def load_library(path)
-  yaml_library = YAML.load_file(path)
   library = { "get_meaning" => {}, "get_emoticon" => {} }
-  yaml_library.each do |name, emos|
+  YAML.load_file(path).each do |name, emos|
     library["get_meaning"][emos[1]] = name
     library["get_emoticon"][emos[0]] = emos[1]
-=begin
-    emos.each do |english, japanese|
-      library["get_meaning"][japanese] = name
-      library["get_emoticon"][english] = japanese
-    end
-=end
   end
-  puts library
   return library
 end
 
