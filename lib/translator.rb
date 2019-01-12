@@ -5,8 +5,8 @@ def load_library(path)
   YAML.load_file(path)
 end
 
-def get_japanese_emoticon
-  library = load_library
+def get_japanese_emoticon(path, emoticon)
+  library = load_library(path)
   
 end
 
